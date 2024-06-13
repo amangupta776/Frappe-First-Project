@@ -1,9 +1,9 @@
 [project]
 name = "student_management"
 authors = [
-    { name = "Aman", email = "a@g.c"}
+    { name = "AMan", email = "a@g.c"}
 ]
-description = "Create For Company Assignment"
+description = "Making For Company Assignment"
 requires-python = ">=3.10"
 readme = "README.md"
 dynamic = ["version"]

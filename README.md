@@ -1,6 +1,6 @@
 ## Student Management
 
-Create For Company Assignment
+Making For Company Assignment
 
 #### License
 

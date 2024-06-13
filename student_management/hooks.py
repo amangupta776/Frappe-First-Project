@@ -1,7 +1,7 @@
 app_name = "student_management"
 app_title = "Student Management"
-app_publisher = "Aman"
-app_description = "Create For Company Assignment"
+app_publisher = "AMan"
+app_description = "Making For Company Assignment"
 app_email = "a@g.c"
 app_license = "mit"
 # required_apps = []
