@@ -227,3 +227,7 @@ app_license = "mit"
 # 	"Logging DocType Name": 30  # days to retain logs
 # }
 
+override_whitelisted_methods = {
+    "student_management.api.handle_request" : "student_management.api.handle_request",  
+  
+}
