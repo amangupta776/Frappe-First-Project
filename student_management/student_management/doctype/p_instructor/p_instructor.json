@@ -11,6 +11,7 @@
   {
    "fieldname": "employee",
    "fieldtype": "Link",
+   "in_list_view": 1,
    "label": "Employee",
    "link_filters": "[[\"Employee\",\"employee_type\",\"!=\",\"Staff\"],[\"Employee\",\"employee_type\",\"!=\",\"Manager\"]]",
    "options": "Employee"
@@ -19,7 +20,7 @@
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2024-06-17 12:11:03.734315",
+ "modified": "2024-06-17 17:07:16.159915",
  "modified_by": "Administrator",
  "module": "Student Management",
  "name": "P Instructor",
