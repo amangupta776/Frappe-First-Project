@@ -119,8 +119,7 @@ curl -X PUT 'http://your-site/api/method/handle_request' \
 -d '{"doctype": "YourDoctype", "name": "record_name", "field1": "new_value1"}'
 Example Response:
 
-json
-Copy code
+
 {
   "name": "record_name",
   "field1": "new_value1",
