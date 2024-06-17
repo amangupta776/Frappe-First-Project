@@ -6,6 +6,7 @@ from frappe.model.document import Document
 from datetime import datetime
 
 class Program(Document):
+	#Function For Validate Dates and Calaculate Duration 
 	def before_save(self):
 		startDate = datetime.strptime(self.start_date, "%Y-%m-%d")
 		year1 = startDate.year

@@ -7,6 +7,7 @@
 // 	},
 // });
 frappe.ui.form.on("Student", {
+    //This Function for autofill value of Joing Date
 	onload_post_render(frm) {
        if(frm.doc.joining_date===undefined){
 
@@ -18,7 +19,7 @@ frappe.ui.form.on("Student", {
        frm.set_value("joining_date",joiningDate)
        }
        	},
-
+       //THis Function For Validate Date Of Joining is not greater than Date of Birth 
     validate: function(frm) {
         let dateOfBirth = frm.doc.date_of_birth;
 
@@ -44,81 +45,21 @@ frappe.ui.form.on("Student", {
         }
     }
     ,
-    // create_user:function(frm){
-    //     frm.save()
-    //     .then(() => {
-    //         frappe.msgprint(__('Document saved successfully.'));
-    //     })
-    //     .catch((error) => {
-    //         frappe.msgprint({
-    //             title: __('Error'),
-    //             indicator: 'red',
-    //             message: __('There was an error saving the document: ') + error.message
-    //         });
-    //     });
-    // }
-    create_user: function(frm) {
+    //This Function For When Click on Create User Button Then Save The Date
+    create_user:function(frm){
         frm.save()
         .then(() => {
-        frappe.msgprint(__('Document saved successfully.'));
-        
-                    // Prepare the user data
-                    let user_data = {
-                        "doctype": "User",
-                        "send_welcome_email": 0,
-                        "email": frm.doc.email,
-                        "first_name": frm.doc.first_name,
-                        "user_type": "Website User"
-                    };
-        
-                    // Create the user
-                    frappe.call({
-                        method: "frappe.client.insert",
-                        args: {
-                            doc: user_data
-                        },
-                        callback: function(response) {
-                            if (response.message) {
-                                let user = response.message;
-        
-                                // Generate reset password link
-                                frappe.call({
-                                    method: "frappe.core.doctype.user.user.reset_password",
-                                    args: {
-                                        user: user.name
-                                    },
-                                    callback: function(reset_response) {
-                                        if (reset_response.message) {
-                                            let update_password_link = reset_response.message;
-                                            frappe.msgprint(__('User created successfully. Password reset link: ') + update_password_link);
-                                        } else {
-                                            frappe.msgprint({
-                                                title: __('Error'),
-                                                indicator: 'red',
-                                                message: __('Failed to generate reset password link.')
-                                            });
-                                        }
-                                    }
-                                });
-                            } else {
-                                frappe.msgprint({
-                                    title: __('Error'),
-                                    indicator: 'red',
-                                    message: __('Failed to create user.')
-                                });
-                            }
-                        }
-                    });
-                })
-                .catch((error) => {
-                    frappe.msgprint({
-                        title: __('Error'),
-                        indicator: 'red',
-                        message: __('There was an error saving the document: ') + error.message
-                    });
-                });
-            }
-    ,
+            frappe.msgprint(__('Document saved successfully.'));
+        })
+        .catch((error) => {
+            frappe.msgprint({
+                title: __('Error'),
+                indicator: 'red',
+                message: __('There was an error saving the document: ') + error.message
+            });
+        });
+    },
+    //This Function For Show Full Address When Select Address
     address: function(frm) {
         if(frm.doc.address) {
             frappe.call({

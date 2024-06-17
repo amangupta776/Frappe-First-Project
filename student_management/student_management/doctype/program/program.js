@@ -2,7 +2,7 @@
 // For license information, please see license.txt
 
 frappe.ui.form.on("Program", {
-          
+    // Use This Function For Calculate Total Credits   
     validate:function(frm){
         let total_credit=0;
         arrDatas=frm.doc["courses"];
