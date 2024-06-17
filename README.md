@@ -273,7 +273,3 @@ Common Error Responses
 401 Unauthorized: Authentication failed.
 404 Not Found: Resource not found.
 500 Internal Server Error: An error occurred on the server.
-License
-This project is licensed under the MIT License.
-
-This README file now includes an objective, detailed steps for creating specific doctypes, and comprehensive instructions for us
